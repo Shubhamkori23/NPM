@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/Shubhamkori23/NodeJs/issues"
   },
-  "homepage": "https://github.com/Shubhamkori23/NodeJs#readme",
-  "devDependencies": {
-    "lodash": "^4.17.21"
-  }
+  "homepage": "https://github.com/Shubhamkori23/NodeJs#readme"
 }
