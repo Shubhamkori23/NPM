@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Shubhamkori23/NodeJs#readme",
   "dependencies": {
     "moment": "^2.29.3"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.21"
   }
 }
