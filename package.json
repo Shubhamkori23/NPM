@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Shubhamkori23/NodeJs#readme",
   "dependencies": {
+    "lodash": "^4.17.21",
     "underscore": "^1.13.4"
+  },
+  "devDependencies": {
+    "moment": "^2.29.3"
   }
 }
