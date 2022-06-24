@@ -25,4 +25,4 @@ Speaking of Excel, if I had wanted to control the contents of the junk files I w
 and didn’t find that other tools provided enough opportunity for such control, I might have used 
 this macro to export the contents of a spreadsheet to individual files, one per row, where column 
 A in the spreadsheet would contain my desired filenames (e.g., JunkFile000001.txt) and column B would
- contain the desired (potentially unique) contents of those respective output files
+ contain the desired (potentially unique) contents of those respective output files.
