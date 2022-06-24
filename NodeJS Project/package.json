@@ -1,7 +1,7 @@
 {
   "name": "project1",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node JS Project",
   "main": "index.js",
   "scripts": {
     "start": "node app.js"
@@ -13,5 +13,6 @@
   },
   "devDependencies": {
     "moment": "^2.29.3"
-  }
+  },
+  "keywords": []
 }
