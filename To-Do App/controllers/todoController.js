@@ -1,5 +1,4 @@
 var bodyParser = require('body-parser');
-const { request } = require('express');
 var mongoose = require('mongoose');
 
 //Connect To The Database
@@ -40,7 +39,7 @@ module.exports = function (app) {
 
     app.delete('/todo/:item', function (req, res) {
         //delete the requested item from mongoDB
-        Todo.find({item: req.params.item.replace(/\-/g, " ")}).remove(function(err, data){
+        Todo.find({ item: req.params.item.replace(/\-/g, " ") }).remove(function (err, data) {
             if (err) throw err;
             res.json(data);
         });
