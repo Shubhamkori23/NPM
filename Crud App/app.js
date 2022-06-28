@@ -3,7 +3,6 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var Book = require('./Book.model');
-const { functionsIn } = require('lodash');
 
 var port = 8080;
 mongoose.connect('mongodb+srv://<username>:<password>@cluster0.tt98tdj.mongodb.net/example');
@@ -77,20 +76,35 @@ app.post('/book', function (req, res) {
 //     });
 //   });
 
-app.put('/book/:id', function (req, res) {
+//update a book in the database
+app.put('/book/:id', function(req, res){
   Book.findOneAndUpdate({
-    _id: req.params.id
+      _id: req.params.id
   },
-    {
-      $set: { title: req.body.title }
-    }, { upsert: true }, function (err, newBook) {
-      if (err) {
-        res.send('error updating ');
-      } else {
-        console.log(newBook);
-        res.send(newBook);
+  { $set: {title:req.body.title, author:req.body.author, category:req.body.category}},
+  { upsert: true },
+  function(err, newBook){
+      if(err){
+          console.log('error occured');
+      } else{
+          console.log(newBook);
+          res.send(newBook);
       }
-    });
+  });
+});
+
+//delete book by id from the database
+app.delete('/book/:id', function(req, res){
+  Book.findOneAndRemove({
+      _id: req.params.id
+  }, function(err, book){
+      if(err){
+          res.send('error occured');
+      }else{
+          console.log(book);
+          res.status(204);
+      }
+  });
 });
 
 app.listen(port, function () {
