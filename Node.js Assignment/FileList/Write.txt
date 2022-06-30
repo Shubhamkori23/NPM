@@ -1,0 +1,1 @@
+fs.readFile() method is an inbuilt method which is used to read the file.
