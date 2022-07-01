@@ -4,6 +4,8 @@ var bodyParser = require("body-parser");
 var session = require("express-session");
 var { v4: uuidv4 } = require("uuid");
 
+var router = require("./router")
+
 var app = express();
 
 var port = process.env.PORT || 3000;
@@ -23,6 +25,8 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }))
+
+app.use('/route', router);
 
 //home route
 app.get('/', (req, res) => {
