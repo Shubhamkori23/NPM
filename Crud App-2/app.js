@@ -28,7 +28,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //Connection 
 
 /*mongoose.connect("mongodb+srv://<UserName>:<Password>@cluster0.tt98tdj.mongodb.net/mycrud",{

@@ -39,7 +39,6 @@ router.post('/add-users-api', function (req, res, next) {
     })
 });
 
-
 /* GET SINGLE POST BY ID */
 router.get('/get-users-details-api/:id', function (req, res, next) {
     UsersModel.findById(req.params.id, function (err, post) {
